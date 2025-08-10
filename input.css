@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  font-size: 62.5%;
+}
+
+@layer base {
+  h2 {
+    @apply text-center uppercase font-light sm:mb-24 mb-16 tracking-wide lg:text-5xl md:text-4xl text-3xl;
+  }
+
+  h3 {
+    @apply text-center uppercase font-light leading-snug tracking-wider lg:text-xl sm:text-md text-base;
+  }
+
+  h4 {
+    @apply uppercase font-light;
+  }
+
+  h5 {
+    @apply uppercase font-medium lg:text-xl text-md mb-10 text-canary-yellow tracking-wide;
+  }
+}
+
+@layer components {
+  .link-bottom {
+    @apply text-xs uppercase tracking-wider;
+  }
+
+  .back-video {
+    @apply absolute -z-10;
+  }
+
+  .back-video-mobile {
+    @apply absolute -z-10;
+  }
+
+  .active {
+    @apply block !important;
+  }
+
+  .card-link {
+    @apply bg-canary-yellow text-black hover:bg-black hover:text-canary-yellow duration-200 hover:font-semibold hover:-translate-y-1 hover:translate-x-1 border border-canary-yellow px-16 lg:px-16 sm:px-24 py-10 uppercase sm:text-base text-sm;
+  }
+
+  .btn-rotate {
+    @apply transition-all duration-200 -rotate-180;
+  }
+}
+
+#hero {
+  background-image: url("./../lotusMaterial/images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#updatedBG {
+  background-image: url("./../lotusMaterial/images/updated.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+@media (max-width: 600px) {
+  #hero {
+    background-image: url("./../lotusMaterial/images/hero-mobile.jpg");
+    background-size: auto;
+  }
+}
+
+.my-text-shadow {
+  text-shadow: 2px 2px 1rem #000;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+/*
+@keyframes translateInX {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-translateFromLeft {
+  animation: translateInX 1s infinite;
+}
+
+@keyframes transFromRight {
+  0% {
+    transform: translateX(+50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-translate-X {
+  animation: transFromRight 1s;
+}
+*/
+
+/* .btn-rotate {
+  transition-property: all;
+  transform: rotate(180);
+  transition-duration: 200ms;
+} */
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fdef00;
+  border: 3px solid black;
+}
