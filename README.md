@@ -1,6 +1,6 @@
 # Lotus Tailwind Landing Page
 
-Developed by Shahid Metkari
+Developed by Akash Dulange
 
 A modern landing page for Lotus cars built with Tailwind CSS, showcasing the latest models and features.
 
